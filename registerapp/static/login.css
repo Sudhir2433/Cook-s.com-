@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size:16px; 
+}
+
+
+.cont{
+    justify-content: center;
+    /* text-align: center; */
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: 10%;
+    border-width: 100px;
+    border: solid black;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 10px 10px;
+    background:linear-gradient(to right,#7081e3,#5f5653);
+    height:30rem;
+}
+
+
+.user,.pass{
+    
+    padding: 30px;
+    justify-content: center;    
+    /* margin-bottom: -25px; */
+}
+
+label{
+    font-weight: 600;
+}
+
+#password,#username{
+    border-radius: 20px;
+    padding-left: 10px;
+    /* height: 50px;*/
+    height: 50px;
+    width: 100%;
+    background-color: rgb(181, 189, 225);
+    color: black;
+}
+/* in login form for submit(login) button */
+.submit{
+    margin-left: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+    /* padding-inline: 100px; */
+    /* height: 50px; */
+    /* width: 100%; */
+    border-radius: 20px;
+    color:black;
+    /* background-color:#FEFCFF; */
+    /* position:relative; */
+    
+}
+
+
+
+
+/* for signup div */
+
+.signup{
+   
+    display: flex;
+    margin: 10px;
+    position: relative;
+}
+
+.signup1{
+    margin-left: 5px;
+    color: whitesmoke;
+    text-decoration: none;
+    position: relative;
+}
+
+h5{
+    margin-left: 60px;
+   
+}
+
+
+/* user login title */
+.userlogin{
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+
+/*  class of input user1,pass1 */
+.user1,.pass1{
+    margin-bottom: -15px;
+    position: relative;
+}
+
+
+ 
+@media(max-width:1200px){
+    .submit{
+        /* padding-inline:7rem; */
+        margin-left: 30px;
+        margin-bottom: 5px;
+        position: relative;
+    }
+    .signup1{
+        margin-left:2px;   
+    }
+    h5{
+        margin-left: 5px;
+    }
+    .signup{
+        margin: 0;
+    } 
+    .cont{
+        width: 400px;
+        height: 25rem;
+            }
+ 
+} 
+
+@media(max-width:885px){
+    .submit{
+        margin-left: 30px;
+        /* margin-bottom: 3px; */
+        padding: 2px;
+        
+    }
+    h5{
+        margin-left: 3px;
+        font-size: 10px;
+    }
+    .userlogin h2{
+        font-size: 20px;
+    }
+    
+    label{
+        font-weight: 800;
+        font-size: 10px;
+    }
+
+    .signup h5{
+        font-size:12px ;
+        margin-top: 3px;
+    }
+    .signup a{
+        font-size: 10px;
+        margin-top: 3px;
+    }
+
+
+       .cont{
+        justify-content: center;
+        /* text-align: center; */
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-right: 5%;
+        border-width: 80px;
+        border: solid black;
+        /* width: 50px; */
+        height: 21rem;
+            }
+    
+    #password,#username{
+                border-radius: 20px;
+                padding-left: 10px;
+                /* height: 50px;*/
+                height: 30px;
+                width: 100%;
+            }
+            
+}
+
+@media(max-width:647px){
+    .submit{
+        margin-left: 30px;
+        /* margin-bottom: 3px; */
+        padding: 1px;
+        
+    }
+    h5{
+        margin-left: 3px;
+        font-size: 8px;
+    }
+    .userlogin h2{
+        font-size: 15px;
+    }
+    
+    label{
+        font-weight: 800;
+        font-size: 8px;
+    }
+
+    .signup h5{
+        font-size:12px ;
+        margin-top: 3px;
+    }
+    .signup a{
+        font-size: 8px;
+        margin-top: 3px;
+    }
+       .cont{
+        /* margin-right: 5%; */
+        border-width: 50px;
+        border: solid rgb(53, 46, 46);
+        width: 500px;
+        height: 20rem;
+            }
+    
+    #password,#username{
+                border-radius: 20px;
+                padding-left: 10px;
+                /* height: 50px;*/
+                height: 20px;
+                width: 100%;
+            }
+            
+}

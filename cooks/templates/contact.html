@@ -1,0 +1,76 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+<section>
+<div class="container-fluid" >
+   
+<div class="row justify-content-evenly div1row" >
+    <div class="col-5 ">
+      <img src="/static/image/photo.png" class="img-fluid" alt="icecream">
+    </div>
+    <div class="col-5 div1col">
+      <div class="SocialMedia" ><a href="https://www.facebook.com/Sudhir Gupta" style="text-decoration: none; font-size: 20px;"><i class="fa-brands fa-facebook-f"></i>:Folllow me on facebook</a> <br></div>
+      <div class="SocialMedia" ><a href="http://www.instagram.com/sudhirgupta305" style="text-decoration: none;font-size: 20px;"><i class="fa-brands fa-square-instagram"></i>:Folllow me on instagram</a> <br></div>
+      <div class="SocialMedia" ><a href="https://www.linkedin.com/in/sudhir-gupta-34590b207" style="text-decoration: none;font-size: 20px;"><i class="fa-brands fa-linkedin"></i>:Folllow me on linkedin</a> <br></div>
+    </div>
+</div>
+
+  <div class="row div2row" >
+    <div class="col-12">
+      
+      
+    <form method="post" action=".">
+        {% csrf_token %}     
+<div class="row justify-content-evenly">
+  <div class="col-5 mt-3">  
+            <h3 class="mb-3">Contact Form</h3>           
+  <div class="form-group">
+  <label for="{{ form.Name.id_for_label }}"  class="form-label">Your Name:</label>
+  <input type="text" id="{{ form.Name.id_for_label }}"class="form-control x"  name="{{ form.Name.html_name }}" required>
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.Mobile_Number.id_for_label }} "class="form-label">Contact Number:</label>
+    <input type="number" id="{{form.Mobile_Number.id_for_label}}" class="form-control x" name="{{ form.Mobile_Number.html_name }}" required>
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.Email.id_for_label }}"class="form-label">Email:</label>
+    <input type="email" id="{{form.Email.id_for_label}}"class="form-control x"  name="{{ form.Email.html_name }}" required>
+  </div>
+
+  <div class="form-group">
+  <label for="{{ from.messege.id_for_lable }}"class="form-label">Message:</label>
+  <textarea id="{{form.messege.id_for_label}}" class="form-control x" name="{{form.messege.html_name}}" required></textarea> 
+  <button type="submit" class="btn btn-primary y">Submit</button>  
+  </div>
+
+ </div>
+
+ 
+  <div class="col-5 mt-3" >
+    <h3 >Address:</h3>
+    <p>Galgotias college of engineering and technology Greater noida<br>
+    pin-code:201310<br>
+    <i class="fa-solid fa-phone"></i>  :9140902433
+    </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.738221246937!2d77.4950505258842!3d28.457306675760897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc1dc8b29c0e1%3A0x4ee84fe65c694f0!2sGALGOTIAS%20COLLEGE%20OF%20ENGINEERING%20AND%20TECHNOLOGY%2C%20Knowledge%20Park%20II%2C%20Greater%20Noida%2C%20Uttar%20Pradesh%20201310!5e0!3m2!1sen!2sin!4v1691434259776!5m2!1sen!2sin"  
+     style="border:0; width:100%; height:40vh; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </div>
+
+
+</div>
+</form>
+</div>
+</div>
+
+
+
+
+</div>
+
+</section>
+
+
+{% endblock %}

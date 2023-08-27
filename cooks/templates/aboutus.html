@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+  {% block content  %}
+<br>
+<br>
+<br>
+<!-- href="/newsdetails/{{news.news_slug}}" -->
+  <marquee onmouseover="stop()" onmouseout="start()">
+    {% for news in NewsData %}
+    <a > {{news.title}} </a> &nbsp&nbsp&nbsp
+    {% endfor %}
+  </marquee>
+
+    <div class="header"><h1>Better cook Better Health</h1></div>
+    <div class="slider-box">
+        <div class="heading"> 
+            <!-- <img src="logo.png"></img> -->
+            <div class="welcome"><h3>Welcome to cooks.com</h3></div>
+            <div class="welcome"><h4>Join us </h4></div>
+            <div class="welcome"><h6>Better cook better health </h6></div>
+            <p>We are try to provide the better services to our customers and definitely you will enjoy our services after taking it. </p>
+        </div>
+        </div>
+    
+    
+    <div class="main">
+        <h1>Service</h1>
+    
+       <p id="service" style="margin-left:60px; margin-right:40px;"> We are always looking for ways to improve the quality of our food. We have a team of experienced chefs and dietitians who work together to create nutritious and delicious meals that are sure to please. We are also committed to using fresh, locally sourced ingredients whenever possible. With the addition of a new cook, we are confident that we can provide the highest quality food for our customers.</p>
+
+       <h1>Experience</h1>
+       <p id="service" id="experience" style="margin-left:60px; margin-right:40px;"> 
+        We provide a unique cooking experience that takes the guesswork out of creating delicious meals. Our experienced chefs will provide a step-by-step guide to making your favorite dishes. We also offer tips and suggestions on how to create new recipes, perfect for the home chef who likes to experiment with flavors and ingredients. 
+        
+        
+        At ChatSonic, we strive to make cooking an enjoyable and rewarding experience. With our experienced team of chefs and unique recipes, we guarantee you a delicious meal every time. So why not give us a try and enjoy the experience of cooking in the comfort of your own kitchen?</p>
+    </div>
+   {% endblock %}

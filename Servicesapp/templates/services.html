@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+     {% block content  %}
+
+
+
+<section>
+
+<div class="row mt-2" style="justify-content:end;">
+  <div class="col-6 ">
+  <form class="form-inline" method="get">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
+  <button class="btn btn-outline-success my-2 my-sm-0 m-1" type="submit">Search</button>
+</form>
+</div>
+</div>
+
+
+<div class="row pt-5 pb-5 " style="padding-left: 120px;">
+ {% for n in ServiceData %} 
+<div class="col-lg-4 col-md-6 p-5">
+<img class="card-img-top " src="/media/{{n.Image}}" alt="Card image cap" style="border-radius: 20px; height: 230px;"> 
+  <div class="card-body">
+    <h5 class="card-title pt-2" >{{n.Name | capfirst}}</h5>
+    <p class="card-text">{{n.AboutCook | capfirst | truncatechars:60}}</p>
+    <h5 class="card-title" style="color: #23395d;"><p>Cook Type: {{n.Catagry | capfirst}}</p>   <p> Price:  <i class="fas fa-rupee-sign"></i> {{n.Price}}</p></h5>
+    <!-- <h5 class="card-title" style="color: #23395d;"><p>Cook Type: {{n.Catagry | capfirst}}</p></h5> -->
+    <form action="/" method="post">
+      {% csrf_token %}
+      
+      <p class="card-text">{{n.labour_id}}</p>
+   
+    <a href="{% url 'quickview' labour_id=n.labour_id %}" class="btn btn-primary">Quick View</a>
+  </form>
+  </div>
+</div>
+{% empty %}
+No Data found
+{% endfor %}
+
+
+<nav aria-label="Page navigation example ">
+  <ul class="pagination" style="justify-content: center;">
+    {% if servicesData.has_previous %}
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    {% endif %}
+    {% for n in TotalPageList %} 
+    <li class="page-item"><a class="page-link" href="/services/?page={{n}}">{{n}}</a></li>
+    {% endfor %}
+    {% if servicesData.has_next  %}
+    <li class="page-item"><a class="page-link" href="/services/?page={{servicesData.next_page_number}}">Next</a></li>
+    {% endif %}
+  </ul>
+</nav>
+
+</div>
+
+  </section>          
+          {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

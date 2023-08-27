@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row mt-2" style="justify-content: end;">
+    <div class="col-6">
+        <form class="form-inline" method="get" action="{% url 'search' %}">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
+            <button class="btn btn-outline-success my-2 my-sm-0 m-1" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+
+<ul>
+    {% for result in results %}
+        <li>{{ result.Name }}</li>
+    {% empty %}
+        <p>No results found.</p>
+    {% endfor %}
+</ul>
+
+{% endblock %}

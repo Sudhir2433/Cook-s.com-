@@ -1,0 +1,26 @@
+<!-- incremant decremant -->
+<div class="row">
+    <h3 style="margin-left: 190px; margin-top: 20px; color: #23395d;">Step-1</h3>
+    <div class=" col-12" style="margin-left: 7rem; ">
+     
+     <div class="cart-item" style="margin-top: 20px;">
+     <h3 style="text-align: center; margin-bottom: 20px; color: #23395d;">Select Your Family Size: Choose the Number of Loved Ones in Your Household </h3>
+       <span class="product-name " style="color: #23395d; margin-left: 20px;"><b>Cook Name: </b>{{services.Name | capfirst}} </span>
+       
+       <!-- <span class="product-price">$({{Services.Price}})</span> -->
+       
+       <span class="product-price mt-5 form-control" id="product-price" data-initial-price="{{ services.Price }}" style=" color: #23395d;"><b>Price: </b>{{ services.Price }}</span>
+       <div class="quantity-controls" style="margin-left: 20px;">
+           <div style="display: flex ;margin-top: 20px;">
+               <button class="decrement-button">-</button>
+               <span class="product-quantity" style="margin-top: 10px;">1</span>
+               <button class="increment-button">+</button>
+             <button class="remove-button"style="margin-left:20px;">Remove</button>
+           </div>
+       </div>
+      </div>
+    </div>
+   </div>
+  </div>
+  
+  

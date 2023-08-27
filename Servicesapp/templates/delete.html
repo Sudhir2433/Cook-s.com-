@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post" action="{% url 'delete_view ' instance.labour_id %}">
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{ instance }}"?</p>
+     <button type="submit">Delete</button>
+</form>
+{% endblock %}

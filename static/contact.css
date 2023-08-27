@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* .form-control{
+    
+
+} */
+
+.x{
+    margin-bottom: 20px;
+    opacity: .5;
+}
+.y{
+   border-radius: 10px;
+   padding:10px;
+}
+
+                                   /* for first row div */
+.div1row{
+    /* border: solid;  */
+    width:100%;
+    margin-top:10px;
+}
+
+                                        /* for first col div */
+.div1col{
+  margin:20px; padding-left: 100px; padding-top: 100px;  
+}
+
+                                    /* for secand row div */
+.div2row{
+    margin: 3px; margin-top: 20px; margin-bottom:20px; width: 100%; background-color: #f1f1f1;
+}
+
+.div1col h5 a{
+   color:rgb(49, 49, 200) ;
+   
+}
+.div1col:hover{
+   color: black ;
+
+}
+.SocialMedia{
+    margin-top: 20px;
+     color: rgb(49, 49, 200);
+}
+
+
+                                     /* CookRegistation Page  Css*/
+
+
+
+.cookReg{
+    padding: 10px;
+    padding-bottom: 20px;
+}
+/* .cookReginput{
+    margin: 20px; 
+}*/
+.s{
+    margin: 10px;
+    color: #23395d;
+}

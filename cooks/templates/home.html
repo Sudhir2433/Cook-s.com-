@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooks.com </title>
+    <!-- <link rel="shortcut icon" href="/static/logo.png"> -->
+    <link rel="stylesheet" href="/static/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css ">
+  </head>
+<body>
+<div class="container">
+      
+    <div class="sidebar sidebargo">
+      <nav> 
+      <ul>
+            <li><a href="{% url 'home' %}"target="_main"><i class="fa-solid fa-house"></i> HOME</a></li>
+            <li><a href="{% url 'services' %}"target="_main"><i class="fa-solid fa-gear"></i> SERVICES</a></li>
+            
+            {% if request.user.is_authenticated %}
+            <li><a href="{% url 'logout' %}"target="_main"><i class="fa-solid fa-right-to-bracket"></i>LOGOUT</a></li> 
+            {% else %}
+            <li><a href="{% url 'login' %}"target="_main"><i class="fa-solid fa-right-to-bracket"></i>LOGIN</a></li> 
+            <li><a href="{% url 'register' %}"target="_main"><i class="fa-solid fa-user-plus"></i>SIGN-UP</a> </li>
+
+            {% endif %}
+            <li><a href="{% url 'about' %}"target="_main"><i class="fa-solid fa-address-card"></i> ABOUT-US</a></li>  
+            <li><a href="{% url 'contact' %}"target="_main"><i class="fa-solid fa-address-book"></i> CONTACT</a></li>
+            
+      
+          </ul>
+      </nav> 
+    </div>
+
+    <div class="main">
+      
+     <div class="hamburger">
+      <img class="ham" src="/static/image/Hamburger.png" alt="hamberger" width='23'> 
+      <!-- <img class="cross" src="/static/image/Hamburger.png" alt="hamberger" width='23'> -->
+     </div>
+ 
+    <!-- <div class="infocontainer"> -->
+      
+      <div class="heading"> 
+        <div class="welcome"><h1>Welcome to cooks.com</h1></div>
+        <div class="join"><h2>Join us </h2></div>
+        <div class="slogan"><h3>Better health with better cook</h3></div>      
+      </div>
+    </div>
+    </div>  
+
+  
+    <script src="static/index.js"></script>
+    </body>
+</html>
