@@ -18,22 +18,49 @@
      <div class="row">
         <div class="col-md-4">
          
-          <img class="card-img-top mt-5" src="/media/{{service.Image}}" alt="Card image cap" style="border-radius: 20px;"> 
-          <a href="" class="btn btn-primary mt-3">Pay Now</a>
+          <img class="card-img-top mt-5" src="/media/{{services.Image}}" alt="Card image cap" style="border-radius: 20px;"> 
+          <!-- <a href="" class="btn btn-primary mt-3">Pay Now</a> -->
         </div>
            <div class="col-md-8" >
-            <h5 style="margin-top: 50px; margin-left: 50px;">Name:-  {{service.Name}}</h5>
-            <p style="margin-left: 50px; "> {{service.AboutCook}}</p>
-            <h5 style="margin-top: 30px; margin-left: 50px;">Rs:-  {{service.Price}}</h5>
+            <h5 style="margin-top: 50px; margin-left: 50px;">Name:-  {{services.Name}}</h5>
+            <p style="margin-left: 50px; "> {{services.AboutCook}}</p>
+            <h5 style="margin-top: 30px; margin-left: 50px;">Rs:-  {{services.Price}} (Per head)</h5>
            </div>
         </div>
      </div>
+
+     <div class="row">
+      <h3 style="margin-left: 190px; margin-top: 20px; color: #23395d;">Step-1</h3>
+      <div class=" col-12" style="margin-left: 7rem; ">
+       
+       <div class="cart-item" style="margin-top: 20px;">
+       <h3 style="text-align: center; margin-bottom: 20px; color: #23395d;">Select Your Family Size: Choose the Number of Loved Ones in Your Household </h3>
+         <span class="product-name " style="color: #23395d; margin-left: 20px;"><b>Cook Name: </b>{{services.Name | capfirst}} </span>
+         
+         <!-- <span class="product-price">$({{Services.Price}})</span> -->
+         
+         <span class="product-price mt-5 form-control" id="product-price" data-initial-price="{{ services.Price }}" style=" color: #23395d;"><b>Price: </b>{{ services.Price }}</span>
+         <div class="quantity-controls" style="margin-left: 20px;">
+             <div style="display: flex ;margin-top: 20px;">
+                 <button class="decrement-button">-</button>
+                 <span class="product-quantity" style="margin-top: 10px;">1</span>
+                 <button class="increment-button">+</button>
+                 <a href="{% url 'aboutyou' %}" class="btn btn-primary mt-3 ml-4">Book Now</a>
+             </div>
+         </div>
+        </div>
+      </div>
+     </div>
+    </div>
+    
 
 
      
 
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/static/incdec.js"></script>
+    
+   
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

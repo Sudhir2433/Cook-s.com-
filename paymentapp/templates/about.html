@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<style>
+     nav span{
+    font-size: 50px;
+    padding-left:30px;
+    color:#3944bc; 
+}
+span .Lname{
+    color:#ff0000;
+}
+</style>
+<body>
+    <header>   
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <span class="title"><span class="Lname">C</span>ooks.com</span>
+            </button>
+        </nav>
+    </header>
+
+      <!-- Step Navigation -->
+      <ul class="nav nav-tabs mt-1"style="justify-content:center;">
+        <li class="nav-item">
+            <a class="nav-link active" id="step-1-tab" data-toggle="tab" href="#step-1">ABOUT YOU</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" id="step-2-tab" data-toggle="tab" href="#step-2">CONTACT DETAILS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" id="step-3-tab" data-toggle="tab" href="#step-3">ADDRESS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" id="step-4-tab" data-toggle="tab" href="#step-4">PAYMENT PROCESS</a>
+        </li>
+       
+    </ul>
+    <div class="row mt-5" style="justify-content:center;">
+        <div class="col-8" style="margin-left: 50px;">
+        
+        <form method="post" action=".">
+            {% csrf_token %}
+            <div class="form-row">
+                <h5 style="text-align: center; text-decoration: underline; margin-right: 80px;">ABOUT YOU</h5>
+                <div class="col-10 mb-3">
+                  <label for="validationServer01">First name</label>
+                  <input type="text" name="fname" class="form-control is-valid" id="validationServer01" placeholder="First name"  required>
+                </div>
+                <div class="col-10 mb-3">
+                  <label for="validationServer02">Last name</label>
+                  <input type="text" name="lname" class="form-control is-valid" id="validationServer02" placeholder="Last name"  required>
+            <button type="submit" class="btn btn-primary mt-3">Submit Form</button>
+            
+        </div>
+
+        </form>
+    </div>
+</div>
+
+    
+       
+    <!--  Include Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

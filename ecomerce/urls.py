@@ -26,6 +26,7 @@ urlpatterns = [
     path('',include('cooks.urls')),
     path('registerapp/', include('registerapp.urls')),
     path('Servicesapp/', include('Servicesapp.urls')),
+    # path('payapp/',include('payapp.urls')),
     path('paymentapp/',include('paymentapp.urls')),
     # path('news/', views.news_list, name='news_list'),
 
