@@ -8,23 +8,23 @@
 
 } */
 
-.x{
+.textarea-input{
     margin-bottom: 20px;
     opacity: .5;
 }
-.y{
+.submit{
    border-radius: 10px;
    padding:10px;
 }
 
-                                   /* for first row div */
+/* for first row div */
 .div1row{
     /* border: solid;  */
     width:100%;
     margin-top:10px;
 }
 
-                                        /* for first col div */
+/* for first col div */
 .div1col{
   margin:20px; padding-left: 100px; padding-top: 100px;  
 }
@@ -44,7 +44,9 @@
 }
 .SocialMedia{
     margin-top: 20px;
-     color: rgb(49, 49, 200);
+    color: rgb(49, 49, 200);
+    text-decoration: none; 
+    font-size: 20px;
 }
 
 
@@ -63,3 +65,16 @@
     margin: 10px;
     color: #23395d;
 }
+
+/* @media (max-width:660){
+    .div1row{
+       
+        width:auto;
+        margin-top:10px;
+    }
+    .SocialMedia{
+       width: 100%;
+       flex-wrap: wrap;
+       font-size: 10px;
+    }
+} */

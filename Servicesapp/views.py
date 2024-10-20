@@ -19,10 +19,10 @@ from django.core.paginator import Paginator
  from .forms import YourModelForm }'''
 
 
-# @login_required(login_url='login')
+
 def services(request):
     ServiceData=Services.objects.all()
-    print(ServiceData)
+    # print(ServiceData)
     if request.method=="GET":
         Search=request.GET.get('search')
         if Search!=None:

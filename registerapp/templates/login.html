@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-  {% block content %}
-    
-       <!-- Section: Design Block -->
+{% block content %}
+
+<!-- Section: Design Block -->
 <section class="m-3">
   <!-- Jumbotron -->
   <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
@@ -9,12 +9,15 @@
       <div class="row gx-lg-5 align-items-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
           <h1 class="my-5 display-3 fw-bold ls-tight">
-            Cooks.com 
-             <br />
+            Cooks.com
+            <br />
             <span class="text-primary">better cook better health</span>
           </h1>
           <p style="color: hsl(217, 10%, 50.8%)">
-            We provide a unique cooking experience that takes the guesswork out of creating delicious meals. Our experienced chefs will provide a step-by-step guide to making your favourite dishes. We also offer tips and suggestions on how to create new recipes, perfect for the home chef who likes to experiment with flavors and ingredients.?
+            We provide a unique cooking experience that takes the guesswork out of creating delicious meals. Our
+            experienced chefs will provide a step-by-step guide to making your favourite dishes. We also offer tips and
+            suggestions on how to create new recipes, perfect for the home chef who likes to experiment with flavors and
+            ingredients.?
           </p>
         </div>
         <div class="col-lg-6 mb-5 mb-lg-0">
@@ -23,58 +26,45 @@
               <form method="post">
                 {% csrf_token %}
                 <!-- 2 column grid layout with text inputs for the first and last names -->
-                
+
                 <div class="row">
-          
-                 <div class="col-12 mb-5" style="color: blue;">
-                  <h3>Login Form</h3>
-                 </div>
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="text" id="username" name="username" class="form-control" />
-                  <label class="form-label" for="username">Username</label>
-                </div>
 
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                  <input type="password" id="password" name="password"  class="form-control" />
-                  <label class="form-label" for="password">Password</label>
-                </div>
+                  <div class="col-12 mb-5" style="color: blue;">
+                    <h3>Login Form</h3>
 
-                <!-- Checkbox -->
-                <!-- <div class="form-check d-flex justify-content-center mb-4">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                  <label class="form-check-label" for="form2Example33">
-                    Subscribe to our newsletter
-                  </label>
-                </div> -->
 
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">
-                  Login</button>
+                    {% if messages %}
+                    <ul class="messages">
+                      {% for message in messages %}
+                      <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
 
-                <!-- Register buttons -->
-                <!-- <div class="text-center">
-                  <p>or sign up with:</p>
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                  </button>
+                  </div>
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <input type="text" id="username" name="username" class="form-control" />
+                    <label class="form-label" for="username">Username</label>
+                  </div>
 
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                  </button>
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <input type="password" id="password" name="pass1" class="form-control" />
+                    <label class="form-label" for="password">Password</label>
+                  </div>
 
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                  </button>
 
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-github"></i>
-                  </button>
-                </div> -->
-                <div class="signup">
-                  <h5>create an acount? </h5>
-                  <a href="{% url 'register' %}" target="_main" class="signup1" style="text-decoration: none;"> SIGN UP</a>
+
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-primary btn-block mb-4">
+                    Login</button>
+
+
+                  <div class="signup">
+                    <h5>create an acount? </h5>
+                    <a href="{% url 'register' %}" target="_main" class="signup1" style="text-decoration: none;"> SIGN
+                      UP</a>
                   </div>
                 </div>
               </form>

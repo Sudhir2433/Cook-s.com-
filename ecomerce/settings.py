@@ -62,7 +62,7 @@ ROOT_URLCONF = 'ecomerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -146,6 +146,8 @@ EMAIL_HOST_USER= 'guptas8846@gmail.com'
 EMAIL_HOST_PASSWORD='fufpavcdfugsxfpl' 
 
 EMAIL_PORT=587
+
 import os
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 MEDIA_URL='/media/' 
+
